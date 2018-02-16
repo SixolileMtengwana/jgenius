@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Weather</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- This is where the Weather App will be istalled -->
+    <!-- <ion-title><ion-icon name='rainy'item-end></ion-icon> MyWeather</ion-title> -->
+    <ion-searchbar placeholder="City"></ion-searchbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img src="https://cdn3.iconfinder.com/data/icons/weather-and-forecast/51/Weather_icons_grey-03-512.png" [alt]="city.engName">
+        </ion-col>
+        <ion-col col-10>
+          <ion-label class="icon-app" no-padding no-margin item-right> {{ city.engName }} </ion-label>
+          <ion-label class="sub-text" no-padding no-margin item-right> Temperature: 23°F </ion-label>
+          <ion-label class="sub-text" no-padding no-margin item-right> Time: {{ time |date:'shortTime'}} </ion-label>
+          <ion-label class="sub-text" no-padding no-margin item-right> Date: {{ time |date:'fullDate'}} </ion-label><br>
+          <!-- Content on Weather -->
+          Cape Town is a port city on South Africa’s southwest coast, on a peninsula beneath the imposing Table Mountain. Slowly rotating cable cars climb to the mountain’s flat top, from which there are sweeping views of the city, the busy harbor and boats heading for Robben Island, the notorious prison that once held Nelson Mandela, which is now a living museum.
+        </ion-col>   
+      </ion-row>     
+    </ion-grid>
+</ion-content>
