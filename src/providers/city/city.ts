@@ -2,23 +2,23 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class City   {
-  engName:string;
-  localName:string;
-  key:number;
+  EnglishName:string;
+  LocalizedName:string;
+  Key:number;
 
   constructor( engName:string , localName:string , key:number ) {
-    this.engName = engName;
-    this.localName = localName;
-    this.key = key;
+    this.EnglishName = engName;
+    this.LocalizedName = localName;
+    this.Key = key;
   }
 
   toString():string{
-    return 'Key: ' + this.key +
-           '\nEnglish Name: ' + this.engName +
-           '\nLocal Name: ' + this.localName;
+    return 'Key: ' + this.Key +
+           '\nEnglish Name: ' + this.EnglishName +
+           '\nLocal Name: ' + this.LocalizedName;
   }
  equals(city:City):boolean{
-   return this.engName === city.engName && this.localName === city.localName && this.key === city.key 
+   return this.EnglishName === city.EnglishName && this.LocalizedName === city.LocalizedName && this.Key === city.Key 
  }
 
 }

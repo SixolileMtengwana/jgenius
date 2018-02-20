@@ -12,6 +12,8 @@ import { AccuWeatherApi } from '../providers/services-accuweather-api/services-a
 import { Weather } from '../providers/weather/weather';
 import { HttpClientModule } from '@angular/common/http';
 import { City } from '../providers/city/city';
+import { LocationCoord } from '../providers/location/location';
+import { TemperatureProvider } from '../providers/temperature/temperature';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { City } from '../providers/city/city';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
    AccuWeatherApi,
     Weather,
-    City
+    City,
+    LocationCoord,
+    TemperatureProvider
   ]
 })
 export class AppModule {}

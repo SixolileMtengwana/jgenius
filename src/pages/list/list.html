@@ -14,10 +14,10 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <img src="https://cdn3.iconfinder.com/data/icons/weather-and-forecast/51/Weather_icons_grey-03-512.png" [alt]="city.engName">
+          <img src="https://cdn3.iconfinder.com/data/icons/weather-and-forecast/51/Weather_icons_grey-03-512.png" [alt]="city.EnglishName">
         </ion-col>
         <ion-col col-10>
-          <ion-label class="icon-app" no-padding no-margin item-right> {{ city.engName }} </ion-label>
+          <ion-label class="icon-app" no-padding no-margin item-right> {{ city.EnglishName }} </ion-label>
           <ion-label class="sub-text" no-padding no-margin item-right> Temperature: 23°F </ion-label>
           <ion-label class="sub-text" no-padding no-margin item-right> Time: {{ time |date:'shortTime'}} </ion-label>
           <ion-label class="sub-text" no-padding no-margin item-right> Date: {{ time |date:'fullDate'}} </ion-label><br>
