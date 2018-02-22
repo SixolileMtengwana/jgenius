@@ -16,7 +16,6 @@ export class WeatherPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, protected accuweather: AccuWeatherApi, ) {
     setTimeout(()=>{
     if(this.city.equals(new City('','',0)))
-    console.log('subscribing')
         this.getWeather();
     },1000);
   }
@@ -25,6 +24,10 @@ export class WeatherPage {
   }
   getWeather():void{
     this.accuweather.city_connect( AccuWeatherApi.location.latitude , AccuWeatherApi.location.longitude );
+    setTimeout(() => {
+      this.accuweather.weather_connect(  this.city.Key );
+    },2000);
+    
   }
   get city():City{
      return this.accuweather.getCity();

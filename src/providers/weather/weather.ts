@@ -1,17 +1,26 @@
-// import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Temperature } from '../temperature/temperature';
 
-/*
-  Generated class for the WeatherProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class Weather {
-  
+  date: Date;
+  minimum: Temperature;
+  maximum: Temperature;
+
   constructor() {
-  
+
+  }
+
+  setDate(date: Date): void {
+    this.date = date;
+  }
+
+  setMinimumTemperature(minimum: Temperature): void {
+    this.minimum = minimum;
+  }
+
+  setMaximumTemperature(maximum: Temperature): void {
+    this.maximum = maximum;
   }
 
 }

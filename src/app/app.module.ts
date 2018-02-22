@@ -13,7 +13,7 @@ import { Weather } from '../providers/weather/weather';
 import { HttpClientModule } from '@angular/common/http';
 import { City } from '../providers/city/city';
 import { LocationCoord } from '../providers/location/location';
-import { TemperatureProvider } from '../providers/temperature/temperature';
+import { Temperature } from '../providers/temperature/temperature';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,7 @@ import { TemperatureProvider } from '../providers/temperature/temperature';
     Weather,
     City,
     LocationCoord,
-    TemperatureProvider
+    Temperature
   ]
 })
 export class AppModule {}

@@ -1,17 +1,20 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-/*
-  Generated class for the TemperatureProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
-export class TemperatureProvider {
+export class Temperature {
 
-  constructor(public http: HttpClient) {
-    console.log('Hello TemperatureProvider Provider');
+  value:number;
+  unit:string;
+  type:number;
+
+  constructor(value:number,unit:string,type:number) {
+      this.value = value;
+      this.unit = unit;
+      this.type = type;
   }
+  
 
+  toString():string{
+    return 'Temparature:\t\t' + this.value +' ' + this.unit; 
+  }
 }
