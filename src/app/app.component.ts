@@ -1,3 +1,4 @@
+
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -5,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { WeatherPage } from '../pages/list/list';
+import { ForecastPage } from './../pages/forecast/forecast';
 
 @Component({
   templateUrl: 'app.html'
@@ -21,7 +23,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', icon:'heart',component: HomePage },
-      { title: 'Weather', icon:'cloud', component: WeatherPage }
+      { title: 'Weather', icon:'cloud', component: WeatherPage },
+      {title: 'Forecast' , icon:'sunny',component:ForecastPage }
     ];
 
   }

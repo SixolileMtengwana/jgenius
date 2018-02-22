@@ -46,6 +46,7 @@ export class AccuWeatherApi {
   }//Key Aj1maGzA6bh5Z49rRaPLVALtcO461Tbv    //  lpCiYpbt9LBuGwP9cKEXaysZNQsSqc2X // yTtzNGfq3QStJbuMV8x41mxYsXKKhds3
   weather_connect(key: number) {
     // End date ===> Friday, 16 Februar, 2018
+    this.weatherHttpCall(key).subscribe();
   }
   weatherHttpCall(key: number): Observable<any> {
     return this.httpClient.get('http://dataservice.accuweather.com/forecasts/v1/daily/5day/' + key + '?apikey=Aj1maGzA6bh5Z49rRaPLVALtcO461Tbv&language=en-us&details=true&metric=true');

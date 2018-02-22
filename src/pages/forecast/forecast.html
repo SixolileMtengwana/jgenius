@@ -1,0 +1,77 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>JGenius</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<div class="forecastLayout">
+    <div padding>
+        <ion-segment [(ngModel)]="day">
+            <ion-segment-button value="0">
+                Mon
+            </ion-segment-button>
+            <ion-segment-button value="1">
+                Tues
+            </ion-segment-button>
+            <ion-segment-button value="2">
+                Wed
+            </ion-segment-button>
+            <ion-segment-button value="3">
+                Thurs
+            </ion-segment-button>
+            <ion-segment-button value="4">
+                Fri
+            </ion-segment-button>
+
+        </ion-segment>
+    </div>
+
+    <div [ngSwitch]="day">
+        <ion-list *ngSwitchCase="'0'">
+            <ion-item>
+                <h2>max</h2>
+                <h2>min</h2>
+                <h2>ave</h2>
+            </ion-item>
+
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'1'">
+            <ion-item>
+                <h2>max</h2>
+                <h2>min</h2>
+                <h2>ave</h2>
+            </ion-item>
+
+        </ion-list>
+        <ion-list *ngSwitchCase="'2'">
+            <ion-item>
+                <h2>max</h2>
+                <h2>min</h2>
+                <h2>ave</h2>
+            </ion-item>
+
+        </ion-list>
+        <ion-list *ngSwitchCase="'3'">
+            <ion-item>
+                <h2>max</h2>
+                <h2>min</h2>
+                <h2>ave</h2>
+            </ion-item>
+
+        </ion-list>
+        <ion-list *ngSwitchCase="'4'">
+            <ion-item>
+                <h2>max</h2>
+                <h2>min</h2>
+                <h2>ave</h2>
+            </ion-item>
+
+        </ion-list>
+
+
+    </div>
+</div>

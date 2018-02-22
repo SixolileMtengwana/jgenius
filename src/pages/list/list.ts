@@ -25,6 +25,7 @@ export class WeatherPage {
   }
   getWeather():void{
     this.accuweather.city_connect( AccuWeatherApi.location.latitude , AccuWeatherApi.location.longitude );
+    
   }
   get city():City{
      return this.accuweather.getCity();
